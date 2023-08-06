@@ -7,23 +7,20 @@ const Enroll = ({ route, navigation }) => {
 
   const enrollCourse = async () => {
     try {
-      // URL of the API endpoint for enrollment. Adjust it as needed.
       const URL = `${URI}/wp-json/learnpress/v1/courses/enroll`;
 
-      // POST request to enroll in the course.
       const response = await axios.post(URL, { id: id }, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
 
-      // Handle the response (e.g., success or failure message).
       Alert.alert(`${response.data.status}`, `${response.data.message}`, [
         { text: 'Continue', onPress: () => navigation.navigate('Lessons', { id, URI, token, user }) },
       ]);
 
     } catch (error) {
-      // Handle any errors that occur during the enrollment process.
+    
       console.error(error);
       Alert.alert('Error', 'An error occurred while enrolling in the course. Please try again.');
     }
@@ -44,24 +41,24 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#fff', // White background
+      backgroundColor: '#fff', 
     },
     title: {
       fontSize: 20,
-      color: '#333', // Dark text color
+      color: '#333', 
       marginBottom: 20,
       textAlign: 'center',
     },
     button: {
       paddingVertical: 12,
       paddingHorizontal: 32,
-      backgroundColor: '#2196F3', // Blue background
+      backgroundColor: '#2196F3', 
       borderRadius: 8,
     },
     buttonText: {
-      fontSize: 18, // Font size
+      fontSize: 18, 
       textAlign: 'center',
-      color: '#fff', // White text color
+      color: '#fff', 
     },
   });
 
