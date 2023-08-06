@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
 import Login from './pages/Login';
 import Courses from './pages/Courses';
+import Enroll from './pages/Enroll';
 import Lessons from './pages/Lessons';
 import Lesson from './pages/Lesson';
 
@@ -16,6 +17,7 @@ export default function App() {
         <Stack.Navigator>
             <Stack.Screen name='Login' component={Login}/>
             <Stack.Screen name='Courses' component={Courses}/>
+            <Stack.Screen name='Enroll' component={Enroll}/>
             <Stack.Screen name='Lessons' component={Lessons}/>
             <Stack.Screen name='Lesson' component={Lesson}/>
         </Stack.Navigator>
