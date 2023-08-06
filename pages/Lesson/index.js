@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { View, Text, Pressable, Image, StyleSheet } from 'react-native';
 import * as FileSystem from 'expo-file-system';
+import * as Linking from 'expo-linking';
 import * as WebBrowser from 'expo-web-browser';
 
 const Lesson = ({ navigation, route }) => {
@@ -38,6 +39,7 @@ const Lesson = ({ navigation, route }) => {
 
   const getPdf = async () => {
     await WebBrowser.openBrowserAsync(pdfLink);
+    setPdf(result);
   };
 
   return (
@@ -46,6 +48,9 @@ const Lesson = ({ navigation, route }) => {
       <Text style={styles.lessonName}>{lesson.name}</Text>
       <Pressable style={styles.button} onPress={getPdf}>
         <Text style={styles.buttonText}>Download PDF</Text>
+      </Pressable>
+      <Pressable onPress={getPdf} style={styles.pdfLinkContainer}>
+        <Text style={styles.pdfLink}>Open PDF in Browser: {pdfLink}</Text>
       </Pressable>
     </View>
   );
@@ -78,6 +83,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  pdfLinkContainer: {
+    marginTop: 20,
+  },
+  pdfLink: {
+    fontSize: 16,
+    color: '#2196F3',
+    textDecorationLine: 'underline',
   },
 });
 

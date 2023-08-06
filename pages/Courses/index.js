@@ -32,7 +32,7 @@ const Courses = ({ route, navigation }) => {
   const getLessons = async (course) => {
     try {
       const id = course.id;
-      navigation.navigate('Lessons', { id, URI, token, user });
+      navigation.navigate('Enroll', { id, URI, token, user });
     } catch (error) {
       console.log(error);
     }
