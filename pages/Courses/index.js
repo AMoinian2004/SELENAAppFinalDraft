@@ -67,14 +67,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5', // Light grayish background
+    backgroundColor: '#f5f5f5', 
   },
   card: {
     width: WindowWidth * 0.7,
     paddingVertical: 20,
     paddingHorizontal: 16,
     marginBottom: 16,
-    backgroundColor: '#333', // Dark background for the card
+    backgroundColor: '#333', 
     borderRadius: 16,
     shadowColor: '#000',
     shadowOffset: {
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    color: '#fff', // White text color
+    color: '#fff', 
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -100,14 +100,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 40,
     padding: 10,
-    backgroundColor: '#333', // Dark background for the buttons
+    backgroundColor: '#333', 
     borderRadius: 16,
-    marginBottom: 16, // Increased margin for better spacing
+    marginBottom: 16, 
   },
   button: {
-    fontSize: 30, // Reduce the font size to 30
-    fontWeight: 'normal', // Use normal font weight instead of bold
-    color: '#fff', // White text color for the button
+    fontSize: 30, 
+    fontWeight: 'normal', 
+    color: '#fff', 
   },
 });
 
